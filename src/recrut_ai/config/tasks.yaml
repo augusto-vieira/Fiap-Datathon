@@ -1,0 +1,33 @@
+analyze_job_task:
+  name: Análise da Vaga de Engenheiro de Machine Learning
+  agent: recruiter_agent
+  description: >
+    Analise minuciosamente a seguinte descrição da vaga, identificando e listando os principais requisitos técnicos, competências, habilidades desejadas e outros critérios relevantes para o sucesso na função.
+    
+    **Detalhes da Vaga:**
+    - **Título:** {job_title}
+    - **Vaga SAP:** {job_sap}
+    - **Área de Atuação:** {area_atuacao}
+    - **Nível Profissional:** {job_level}
+    - **Principais Atividades:** {job_description}
+    
+    Seja objetivo e destaque os pontos críticos que orientarão o processo seletivo.
+  expected_output: "Lista clara e organizada dos requisitos técnicos, competências e critérios relevantes, separados por tópicos."
+
+select_candidates_task:
+  name: Seleção de Candidatos
+  agent: recruiter_agent
+  description: >
+    Com base na análise da vaga realizada na tarefa 'analyze_job_task' e considerando os perfis dos candidatos disponíveis, selecione os candidatos que mais se encaixam nos requisitos e competências da vaga.
+    
+    Para cada candidato selecionado, forneça:
+    - **id do candidato**
+    - **Nome do candidato** (em **negrito**);
+    - Lista dos principais pontos positivos e negativos (prós e contras) relacionados ao perfil da vaga;
+    - Uma justificativa detalhada explicando a linha de raciocínio que fundamentou a escolha.
+    
+    **Dados dos candidatos disponíveis:** {candidate_profile}
+  expected_output: >
+    "Lista dos candidatos selecionados, com o nome em **negrito**, acompanhada dos prós e contras de cada candidato e uma justificativa detalhada para a escolha. Adicione no final do documento a sua analise de qual candidato  mais se destaca e o porquê."
+  context:
+    - analyze_job_task
