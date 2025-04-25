@@ -17,13 +17,13 @@ st.write("Interface gráfica para executar o crew de recrutamento.")
 # prospects_file = st.file_uploader("Carregar prospects.json", type=["json"])
 # vagas_file = st.file_uploader("Carregar vagas.json", type=["json"])
 
-with open(r'C:\Users\lucas\OneDrive\Estudos\Datathon\applicants\applicants.json', 'r', encoding='utf-8') as file:
+with open(os.path.join('data', 'applicants', 'applicants.json'), 'r', encoding='utf-8') as file:
     applicants = json.load(file)
 
-with open(r'C:\Users\lucas\OneDrive\Estudos\Datathon\prospects\prospects.json', 'r', encoding='utf-8') as file:
+with open(os.path.join('data', 'prospects', 'prospects.json'), 'r', encoding='utf-8') as file:
     prospects = json.load(file)
 
-with open(r'C:\Users\lucas\OneDrive\Estudos\Datathon\vagas\vagas.json', 'r', encoding='utf-8') as file:
+with open(os.path.join('data', 'vagas', 'vagas.json'), 'r', encoding='utf-8') as file:
     vagas = json.load(file)
 
 # Entrada para o ID da vaga
@@ -58,7 +58,7 @@ if id_vaga:
                 resultado = RecrutAi().crew().kickoff(inputs=inputs)
                 st.write("Resultado da Análise:")
                 # Ler a saída do crew e exibir
-                with open(r'C:\Users\lucas\Documents\recrut_ai\candidatos_selecionados.md', 'r', encoding='utf-8') as file:
+                with open(os.path.join('src', 'candidatos_selecionados.md'), 'r', encoding='utf-8') as file:
                     resultado = file.read()
                 st.write(resultado)
 

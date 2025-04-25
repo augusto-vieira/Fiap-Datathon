@@ -1,3 +1,9 @@
 .env
 __pycache__/
 .DS_Store
+venv
+
+# Não incluir os arquvivos .json
+data/applicants/*.json
+data/prospects/*.json
+data/vagas/*.json

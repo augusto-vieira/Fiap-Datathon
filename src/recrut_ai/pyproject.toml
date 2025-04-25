@@ -1,0 +1,5 @@
+# src/recrut_ai/pyproject.toml
+[project]
+name = "recrut_ai"
+version = "0.1.0"
+dependencies = []

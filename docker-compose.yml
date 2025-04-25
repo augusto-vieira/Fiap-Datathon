@@ -1,0 +1,28 @@
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    # runtime: nvidia  # Só se estiver usando NVIDIA e nvidia-docker
+    restart: unless-stopped
+
+  app:
+    hostname: app-agent
+    container_name: api_agent_ai
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    restart: unless-stopped
+    depends_on:
+      - ollama
+    env_file:
+      - .env
+
+volumes:
+  ollama_data:
+    name: ollama_data

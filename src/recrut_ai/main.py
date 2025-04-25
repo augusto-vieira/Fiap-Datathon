@@ -2,6 +2,9 @@
 import sys
 import warnings
 import json
+import os
+
+print("API KEY carregada?", "OPENAI_API_KEY" in os.environ)
 
 from datetime import datetime
 
@@ -20,13 +23,13 @@ def run():
     """
 
 
-    with open(r'C:\Users\lucas\OneDrive\Estudos\Datathon\applicants\applicants.json', 'r', encoding='utf-8') as file:
+    with open(os.path.join('data', 'applicants', 'applicants.json'), 'r', encoding='utf-8') as file:
         applicants = json.load(file)
 
-    with open(r'C:\Users\lucas\OneDrive\Estudos\Datathon\prospects\prospects.json', 'r', encoding='utf-8') as file:
+    with open(os.path.join('data', 'prospects', 'prospects.json'), 'r', encoding='utf-8') as file:
         prospecto = json.load(file)
 
-    with open(r'C:\Users\lucas\OneDrive\Estudos\Datathon\vagas\vagas.json', 'r', encoding='utf-8') as file:
+    with open(os.path.join('data', 'vagas', 'vagas.json'), 'r', encoding='utf-8') as file:
         vagas = json.load(file)
 
 
@@ -52,10 +55,10 @@ def run():
         'candidate_profile': applicants_vaga,
     }
 
-    try:
-        # RecrutAi().crew().kickoff(inputs=inputs)
-    except Exception as e:
-        raise Exception(f"An error occurred while running the crew: {e}")
+    # try:
+    #     RecrutAi().crew().kickoff(inputs=inputs)
+    # except Exception as e:
+    #     raise Exception(f"An error occurred while running the crew: {e}")
 
 
 def train():
