@@ -7,3 +7,5 @@ venv
 data/applicants/*.json
 data/prospects/*.json
 data/vagas/*.json
+
+melhorias.txt

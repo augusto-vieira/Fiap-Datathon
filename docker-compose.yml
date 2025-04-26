@@ -1,3 +1,4 @@
+version: "3.9"
 services:
   ollama:
     image: ollama/ollama
@@ -6,9 +7,13 @@ services:
       - "11434:11434"
     volumes:
       - ollama_data:/root/.ollama
-    # runtime: nvidia  # Só se estiver usando NVIDIA e nvidia-docker
+    runtime: nvidia
     restart: unless-stopped
-
+    deploy:
+      resources:
+        limits:
+          cpus: "10.0"
+          memory: "4g" 
   app:
     hostname: app-agent
     container_name: api_agent_ai
@@ -22,7 +27,16 @@ services:
       - ollama
     env_file:
       - .env
-
+    environment:
+      - STREAMLIT_SERVER_RUN_ON_SAVE=false
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: "2g"
 volumes:
   ollama_data:
     name: ollama_data
+networks:
+  default:
+    driver: bridge

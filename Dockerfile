@@ -2,13 +2,13 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY ./requirements.txt .
-
-RUN pip install --no-cache-dir -r requirements.txt
-
 COPY . .
 
-RUN pip install -e ./src/recrut_ai
+COPY ./requirements.txt .
+
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    pip install -e ./src/recrut_ai
 
 EXPOSE 8501
 
