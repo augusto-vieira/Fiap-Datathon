@@ -1,7 +1,7 @@
-.env
 __pycache__/
 .DS_Store
 venv
+.venv
 
 # Não incluir os arquvivos .json
 data/applicants/*.json
