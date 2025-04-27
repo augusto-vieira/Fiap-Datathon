@@ -1,54 +1,132 @@
-# RecrutAi Crew
+## 📜 Índice
 
-Welcome to the RecrutAi Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+- [📜 Índice](#-índice)
+- [📋 Preparação do Ambiente](#-preparação-do-ambiente)
+- [🐳 Executando com Docker](#-executando-com-docker)
+- [🤖 RecrutAi Crew](#-recrutai-crew)
+- [💻 Instalação](#-instalação)
+- [🏹 Uso](#-uso)
+- [🛠️ Customização](#️-customização)
+- [🧠 Entendendo o Crew](#-entendendo-o-crew)
+- [🆘 Suporte](#-suporte)
+- [🪪 Autores](#-autores)
 
-## Installation
+## 📋 Preparação do Ambiente
+Antes de rodar o projeto, é necessário adicionar manualmente os arquivos de dados, pois eles não estão disponíveis no repositório.
 
-Ensure you have Python >=3.10 <3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+1. 🐑 Clone este repositório:
 
-First, if you haven't already, install uv:
+    ```bash
+    git clone https://github.com/augusto-vieira/Fiap-Datathon.git
+    ```
+
+2. 📁 Entre no diretório do projeto:
+
+    ```bash
+    cd Fiap-Datathon
+    ```
+3. 📁 Dentro da pasta data, adicione os seguintes arquivos:
+    ```bash
+    ├── data
+    │   ├── applicants
+    │   │   ├── applicants.json
+    │   ├── prospects
+    │   │   ├── prospects.json
+    │   └── vagas
+    │       ├── vagas.json       
+    ```
+
+## 🐳 Executando com Docker
+
+Você também pode rodar a aplicação usando Docker:
+
+1. 📂 Acesse a pasta raiz da aplicação (Fiap-Datathon).
+
+2. ▶️ Execute o comando:
+
+    ```bash
+    docker compose up -d
+    ```
+3. 🌐 A aplicação estará disponível em:  
+    [http://localhost:8501/](http://localhost:8501/)
+
+4. 🛑 Para parar a aplicação, use:
+
+    ```bash
+    docker-compose down
+    ``` 
+
+## 🤖 RecrutAi Crew
+
+Bem-vindo ao projeto **RecrutAi Crew**, desenvolvido com o poder do [crewAI](https://crewai.com)!  
+Este projeto cria um sistema multiagente de IA de forma fácil e eficiente, aproveitando toda a flexibilidade do framework **crewAI**. Nosso objetivo é permitir que agentes colaborem em tarefas complexas, maximizando inteligência e resultados.
+
+
+## 💻 Instalação
+
+Certifique-se de ter o **Python >=3.10 e <3.13** instalado.  
+Este projeto utiliza o [UV](https://docs.astral.sh/uv/) para gerenciamento de dependências.
+
+1. 📦 Instale o `uv`:
+
+    ```bash
+    pip install uv
+    ```
+
+2. 📁 Acesse a pasta raiz do projeto.
+
+3. 🔒 (Opcional) Trave e instale as dependências:
+
+    ```bash
+    crewai install
+    ```
+
+4. 🔑 Adicione sua chave `OPENAI_API_KEY` no arquivo `.env`.
+
+## 🏹 Uso
+
+Para iniciar sua equipe de agentes de IA e começar a execução das tarefas:
 
 ```bash
-pip install uv
+crewai run
 ```
 
-Next, navigate to your project directory and install the dependencies:
+Este comando inicializa o **RecrutAi Crew**, montando os agentes e distribuindo as tarefas conforme definido.  
+Ao executar o exemplo padrão, será criado um arquivo `report.md` com o resultado de uma pesquisa sobre LLMs.
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+## 🛠️ Customização
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+Você pode personalizar seu projeto facilmente:
 
-- Modify `src/recrut_ai/config/agents.yaml` to define your agents
-- Modify `src/recrut_ai/config/tasks.yaml` to define your tasks
-- Modify `src/recrut_ai/crew.py` to add your own logic, tools and specific args
-- Modify `src/recrut_ai/main.py` to add custom inputs for your agents and tasks
+- ✍️ Edite `src/recrut_ai/config/agents.yaml` para definir seus agentes.
+- ✍️Edite `src/recrut_ai/config/tasks.yaml` para definir suas tarefas.
+- ✍️Edite `src/recrut_ai/crew.py` para adicionar lógica personalizada, ferramentas e argumentos.
+- ✍️Edite `src/recrut_ai/main.py` para adicionar entradas customizadas para agentes e tarefas.
 
-## Running the Project
+## 🧠 Entendendo o Crew
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+O **RecrutAi Crew** é composto por múltiplos agentes de IA, cada um com seus papéis, objetivos e ferramentas.
 
-```bash
-$ crewai run
-```
+- 🚩As tarefas estão definidas em `config/tasks.yaml`.
+- 🚩As configurações dos agentes estão em `config/agents.yaml`.
 
-This command initializes the recrut_ai Crew, assembling the agents and assigning them tasks as defined in your configuration.
+Esses agentes colaboram entre si para realizar objetivos mais complexos. 🚀
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+## 🆘 Suporte
 
-## Understanding Your Crew
+Se precisar de ajuda ou quiser saber mais:
 
-The recrut_ai Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+- 📚 [Documentação oficial do crewAI](https://docs.crewai.com)
+- 🐙 [Repositório no GitHub](https://github.com/joaomdmoura/crewai)
+- 💬 [Comunidade no Discord](https://discord.com/invite/X4JWnZnxPb)
+- 🤖 [Chat com as documentações](https://chatg.pt/DWjSBZn)
 
-## Support
+Vamos criar maravilhas juntos com a força e simplicidade do **crewAI**! ✨
 
-For support, questions, or feedback regarding the RecrutAi Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+---
+## 🪪 Autores
 
-Let's create wonders together with the power and simplicity of crewAI.
+- [Augusto Vieira - RM357293](www.linkedin.com/in/whoami-augusto-vieira)
+- [João Kienen    - RM357561](https://www.linkedin.com/in/jkienen/?jobid=1234)
+- [Lucas Galhardo - RM357287](https://www.linkedin.com/in/lucas-galhardo/?jobid=1234)
+- [Rafael Ribeiro - RM357611](https://github.com/raffaell95)
