@@ -4,11 +4,11 @@
 - [📋 Preparação do Ambiente](#-preparação-do-ambiente)
 - [🐳 Executando com Docker](#-executando-com-docker)
 - [🤖 RecrutAi Crew](#-recrutai-crew)
-- [💻 Instalação](#-instalação)
-- [🏹 Uso](#-uso)
-- [🛠️ Customização](#️-customização)
-- [🧠 Entendendo o Crew](#-entendendo-o-crew)
-- [🆘 Suporte](#-suporte)
+    - [💻 Instalação](#-instalação)
+    - [🏹 Uso](#-uso)
+    - [🛠️ Customização](#️-customização)
+    - [🧠 Entendendo o Crew](#-entendendo-o-crew)
+    - [🆘 Suporte](#-suporte)
 - [🪪 Autores](#-autores)
 
 ## 📋 Preparação do Ambiente
