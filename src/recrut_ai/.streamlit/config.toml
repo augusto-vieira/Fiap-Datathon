@@ -1,0 +1,22 @@
+[theme]
+base="dark"
+primaryColor="#d4737e"
+backgroundColor="#0b0e12"
+secondaryBackgroundColor="#09090a"
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = false
+
+[server]
+address = "localhost"
+enableCORS = false
+enableXsrfProtection = true
+runOnSave = true
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[runner]
+fastReruns = true
