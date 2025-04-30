@@ -47,11 +47,18 @@ Você também pode rodar a aplicação usando Docker:
     ```bash
     docker compose up -d
     ```
-3. 🌐 A aplicação estará disponível em:  
+4. 🦙 Instale o modelo llama3.2:
+    ```bash
+    docker exec -it ollama ollama pull llama3.2
+    ```
+5. 🔎 Para verificar **quais modelos estão disponíveis no Ollama** dentro do seu contêiner:
+    ```bash
+    docker exec -it ollama ollama list
+    ```
+6. 🌐 A aplicação estará disponível em:  
     [http://localhost:8501/](http://localhost:8501/)
 
-4. 🛑 Para parar a aplicação, use:
-
+6. 🛑 Para parar a aplicação, use:
     ```bash
     docker-compose down
     ``` 
