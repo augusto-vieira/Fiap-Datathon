@@ -7,12 +7,12 @@ services:
     volumes:
       - ollama_data:/root/.ollama
     restart: unless-stopped
-    # runtime: nvidia
-    # deploy:
-    #   resources:
-    #     limits:
-    #       cpus: "10.0"
-    #       memory: "4g" 
+    runtime: nvidia
+    deploy:
+      resources:
+        limits:
+          cpus: "10.0"
+          memory: "4g" 
   app:
     hostname: app-agent
     container_name: api_agent_ai
@@ -28,11 +28,11 @@ services:
       - .env
     environment:
       - STREAMLIT_SERVER_RUN_ON_SAVE=false
-    # deploy:
-    #   resources:
-    #     limits:
-    #       cpus: "2.0"
-    #       memory: "2g"
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: "2g"
 volumes:
   ollama_data:
     name: ollama_data

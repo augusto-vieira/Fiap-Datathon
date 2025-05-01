@@ -109,7 +109,7 @@ if clicked:
             st.caption(f"Tempo de execução: {elapsed_time:.2f} segundos")
         
         # Gerar log de performance
-        log_path = os.path.join(current_dir, "logs", "performance_log.csv")
+        log_path = os.path.join(current_dir, "..","logs", "performance_log.csv")
         header = ["ID da Consulta", "Modelo", "Data/Hora", "Tempo de Execução (s)"]
         row = [ID, MODEL, datetime.now().strftime("%Y-%m-%d %H:%M:%S"), elapsed_time]
 

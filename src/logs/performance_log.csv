@@ -1,3 +1,5 @@
 ID da Consulta,Modelo,Data/Hora,Tempo de Execução (s)
 5181,ollama/TinyLLaMA,2025-05-01 19:34:07,285.59
 5183,ollama/TinyLLaMA,2025-05-01 19:37:29,176.77
+5185,ollama/llama3.2,2025-05-01 23:02:03,66.51
+5183,ollama/llama3.2,2025-05-01 23:05:02,54.83
