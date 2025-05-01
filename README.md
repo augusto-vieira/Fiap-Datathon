@@ -4,11 +4,11 @@
 - [📋 Preparação do Ambiente](#-preparação-do-ambiente)
 - [🐳 Executando com Docker](#-executando-com-docker)
 - [🤖 RecrutAi Crew](#-recrutai-crew)
-    - [💻 Instalação](#-instalação)
-    - [🏹 Uso](#-uso)
-    - [🛠️ Customização](#️-customização)
-    - [🧠 Entendendo o Crew](#-entendendo-o-crew)
-    - [🆘 Suporte](#-suporte)
+- [💻 Instalação](#-instalação)
+- [🏹 Uso](#-uso)
+- [🛠️ Customização](#️-customização)
+- [🧠 Entendendo o Crew](#-entendendo-o-crew)
+- [🆘 Suporte](#-suporte)
 - [🪪 Autores](#-autores)
 
 ## 📋 Preparação do Ambiente
@@ -47,7 +47,7 @@ Você também pode rodar a aplicação usando Docker:
     ```bash
     docker compose up -d
     ```
-4. 🦙 Instale o modelo llama3.2:
+4. 🦙 Instale o modelo llama3.2 (ou outro modelo de sua preferência):
     ```bash
     docker exec -it ollama ollama pull llama3.2
     ```
@@ -55,10 +55,14 @@ Você também pode rodar a aplicação usando Docker:
     ```bash
     docker exec -it ollama ollama list
     ```
-6. 🌐 A aplicação estará disponível em:  
+   🔎 Verificar o modelo que está sendo **utilizado** no seu ambiente:
+    ```bash
+   docker exec -it api_agent_ai printenv MODEL
+    ```
+1. 🌐 A aplicação estará disponível em:  
     [http://localhost:8501/](http://localhost:8501/)
 
-6. 🛑 Para parar a aplicação, use:
+2. 🛑 Para parar a aplicação, use:
     ```bash
     docker-compose down
     ``` 

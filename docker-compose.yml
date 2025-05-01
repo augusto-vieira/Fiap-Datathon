@@ -7,7 +7,6 @@ services:
     volumes:
       - ollama_data:/root/.ollama
     restart: unless-stopped
-    
     # runtime: nvidia
     # deploy:
     #   resources:
