@@ -40,7 +40,7 @@ class RecrutAi():
     def select_candidates_task(self) -> Task:
         return Task(
             config=self.tasks_config['select_candidates_task'],
-            output_file='candidatos_selecionados.md'
+            output_file='src/candidatos_selecionados.md'
         )
 
     @crew

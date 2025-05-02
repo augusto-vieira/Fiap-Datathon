@@ -1,29 +1,21 @@
 #!/bin/bash
 
-# Utilize este script para limpar o seu ambiente de teste/desenvolvimento.
+echo "🧹 Limpando containers e recursos do projeto FIAP Datathon..."
 
-# Parar todos os contêineres em execução
-echo "Parando todos os contêineres em execução..."
-docker stop $(docker ps -q)
+# Parar os containers do projeto
+docker stop api_agent_ai ollama 2>/dev/null
 
-# Remover todos os contêineres
-echo "Removendo todos os contêineres..."
-docker rm $(docker ps -a -q)
+# Remover os containers do projeto
+docker rm api_agent_ai ollama 2>/dev/null
 
-# Remover todas as imagens
-echo "Removendo todas as imagens..."
-docker rmi $(docker images -q)
+# Remover volume associado
+docker volume rm ollama_data 2>/dev/null
 
-# Remover volumes não utilizados (opcional)
-echo "Removendo volumes não utilizados..."
-docker volume rm $(docker volume ls -q)
+# (Opcional) Remover imagens específicas (apenas se quiser forçar rebuild)
+# docker rmi fiap-datathon-app ollama/ollama 2>/dev/null
 
-# Remover redes não utilizadas (opcional)
-# echo "Removendo redes não utilizadas..."
-# docker network rm $(docker network ls -q)
+# (Opcional) Limpar recursos não utilizados
+docker image prune -f
+docker volume prune -f
 
-# Limpeza geral (opcional)
-echo "Realizando limpeza geral do sistema..."
-docker system prune -a --volumes -f
-
-echo "Limpeza completa do Docker concluída!"
+echo "✅ Projeto limpo com sucesso!"
