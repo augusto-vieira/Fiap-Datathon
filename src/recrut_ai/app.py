@@ -9,6 +9,7 @@ import streamlit as st # type: ignore
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from recrut_ai.crew import RecrutAi
+from recrut_ai.utils import get_ollama_models, get_model_default
 
 
 # ----------------------------------------->
@@ -16,14 +17,13 @@ from recrut_ai.crew import RecrutAi
 # Getting current path for file saving
 current_dir = os.path.dirname(os.path.realpath(__file__))
 
-# Getting model from environment variable
-MODEL = os.getenv("MODEL", "modelo_desconhecido")
-
 # Initial variables
 path_applicants = os.path.join(current_dir, f"../../data/applicants/applicants.json")
 path_prospects = os.path.join(current_dir, f"../../data/prospects/prospects.json")
 path_vagas = os.path.join(current_dir, f"../../data/vagas/vagas.json")
 path_candidatos = os.path.join(current_dir, f"../candidatos_selecionados.md")
+path_log = os.path.join(current_dir, "..","logs", "performance_log.csv")
+
 
 with open(path_applicants, "r", encoding="utf-8") as file: applicants = json.load(file)
 with open(path_prospects, "r", encoding="utf-8") as file: prospects = json.load(file)
@@ -33,7 +33,7 @@ with open(path_vagas, "r", encoding="utf-8") as file: vagas = json.load(file)
 samples = 5
 ids = sorted(list(vagas.keys())[:samples])
 lista_vagas = [{"ID": id_vaga, "Cargo": vagas[id_vaga]["informacoes_basicas"]["titulo_vaga"]} for id_vaga in list(vagas.keys())[:samples]]
-
+default_model = get_model_default()
 
 
 #################################### Part 2: MLCrew Function ->
@@ -74,7 +74,29 @@ st.set_page_config(page_title="RecrutAi", layout="centered")
 with st.container(border=True): 
     st.header(":grey[*RecrutAi*]", anchor=False, divider="grey")
     st.caption("Sistema inteligente para análise de vagas e seleção de candidatos com base em perfis e competências.")
-    st.caption(f"Modelo utilizado: `{MODEL}`") 
+    st.caption(f"Modelo Padrão: `{default_model}`")
+
+    # Obter modelos disponíveis dinamicamente
+    available_models = get_ollama_models()
+
+    # Adicionar opção "None" ao seletor
+    if available_models:
+        available_models.insert(0, "None")  # Adiciona "None" como primeira opção
+        selected_model = st.selectbox(":grey[Selecione o modelo para análise:]", options=available_models)
+        if selected_model == "None":
+            st.caption("Modelo selecionado: None")
+            current_model = default_model  # Mantém o modelo padrão
+        else:
+            st.caption(f"Modelo selecionado: `{selected_model}`")
+            current_model = selected_model
+        
+        # Atualizar o modelo apenas se for diferente do atual
+        if os.getenv("MODEL") != current_model:
+            os.environ["MODEL"] = current_model
+
+    else:
+        st.error("Nenhum modelo disponível no contêiner Ollama.")
+        current_model = default_model  # Mantém o modelo padrão em caso de erro
 # ->
 
 # -> Bloco B
@@ -95,9 +117,6 @@ with st.container(border=True):
 if clicked:
     block = st.container(border=True)
     try:
-        # Obter modelo a partir da variável de ambiente
-        MODEL = os.getenv("MODEL", "modelo_desconhecido")
-
         # Medição de tempo
         start_time = time.time()
         result = MLCrew(ID)
@@ -109,12 +128,11 @@ if clicked:
             st.caption(f"Tempo de execução: {elapsed_time:.2f} segundos")
         
         # Gerar log de performance
-        log_path = os.path.join(current_dir, "..","logs", "performance_log.csv")
         header = ["ID da Consulta", "Modelo", "Data/Hora", "Tempo de Execução (s)"]
-        row = [ID, MODEL, datetime.now().strftime("%Y-%m-%d %H:%M:%S"), elapsed_time]
+        row = [ID, current_model, datetime.now().strftime("%Y-%m-%d %H:%M:%S"), elapsed_time]
 
-        file_exists = os.path.exists(log_path)
-        with open(log_path, mode="a", newline="", encoding="utf-8") as file:
+        file_exists = os.path.exists(path_log)
+        with open(path_log, mode="a", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
             if not file_exists:
                 writer.writerow(header)
