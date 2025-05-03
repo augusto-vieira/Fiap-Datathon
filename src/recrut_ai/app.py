@@ -74,7 +74,7 @@ st.set_page_config(page_title="RecrutAi", layout="centered")
 with st.container(border=True): 
     st.header(":grey[*RecrutAi*]", anchor=False, divider="grey")
     st.caption("Um match inteligente entre vagas e talentos com agentes autônomos e modelos especializados para análise de vagas e seleção de candidatos conforme perfis e competências.")
-   
+    st.caption(f"Modelo utilizado: `{default_model}`") 
     # Obter modelos disponíveis dinamicamente
     available_models = get_ollama_models()
 
