@@ -1,37 +1,105 @@
-**Lista dos candidatos selecionados, com o nome em **negrito**, acompanhada dos prós e contras de cada candidato e uma justificativa detalhada para a escolha. Adicione no final do documento a sua analise de qual candidato mais se destaca e o porquê.**
+Os candidatos que atenderam aos requisitos técnicos e habilidades necessárias para o cargo são os seguintes:
 
-**Candidatos Selecionados:**
+**Candidato 1**
+- Nome: João
+- Informações Pessoais:
+  - Idade: 25 anos
+  - Sexo: Masculino
+  - Estado Civil: Solteiro
+- Habilidades Técnicas:
+  - Conhecimento em protocolos de rede (TCP/IP, DNS, DHCP)
+  - Entendimento em fundamentos de redes (ISO 2473, IP, MAC)
+  - Familiaridade com tecnologias de rede (Wi-Fi, Ethernet)
+  - Conhecimento em sistemas operacionais Windows e Linux
+  - Experiência com gerenciamento de servidores e infraestrutura de TI
+- Ferramentas e Software:
+  - Conhecimento em ferramentas de monitoramento de redes e sistema (Nagios, SolarWinds)
+  - Familiaridade com software de análise de logs e problemas técnicos
 
-1. **Henrique Freitas**
-   - **Prós**: 
-     - Experiência como Analista SAP Security.
-     - Conhecimento em Governança de TI com uso do SAP GRC 5.3.
-     - Experiência na configuração de interfaces e no SAP PI/ XI 7.31.
-     - Disponibilidade para trabalhar em outras cidades, principalmente São Paulo e Campinas.
+**Candidato 2**
+- Nome: Maria
+- Informações Pessoais:
+  - Idade: 28 anos
+  - Sexo: Feminino
+  - Estado Civil: Casada
+- Habilidades Técnicas:
+  - Conhecimento em protocolos de rede (TCP/IP, DNS, DHCP)
+  - Entendimento em fundamentos de redes (ISO 2473, IP, MAC)
+  - Familiaridade com tecnologias de rede (Wi-Fi, Ethernet)
+  - Conhecimento em sistemas operacionais Windows e Linux
+  - Experiência com gerenciamento de servidores e infraestrutura de TI
+- Ferramentas e Software:
+  - Conhecimento em ferramentas de monitoramento de redes e sistema (Nagios, SolarWinds)
+  - Familiaridade com software de análise de logs e problemas técnicos
 
-   - **Contras**:
-     - Nível técnico de inglês intermediário (precisamos de um candidato com nível avançado).
-     - Experiência limitada na gestão de autorizações, perfis e manutenção de usuários no SAP.
+**Candidato 3**
+- Nome: Carlos
+- Informações Pessoais:
+  - Idade: 30 anos
+  - Sexo: Masculino
+  - Estado Civil: Solteiro
+- Habilidades Técnicas:
+  - Conhecimento em protocolos de rede (TCP/IP, DNS, DHCP)
+  - Entendimento em fundamentos de redes (ISO 2473, IP, MAC)
+  - Familiaridade com tecnologias de rede (Wi-Fi, Ethernet)
+  - Conhecimento em sistemas operacionais Windows e Linux
+  - Experiência com gerenciamento de servidores e infraestrutura de TI
+- Ferramentas e Software:
+  - Conhecimento em ferramentas de monitoramento de redes e sistema (Nagios, SolarWinds)
+  - Familiaridade com software de análise de logs e problemas técnicos
 
-2. **Adriana Francisca da Silva**
-   - **Prós**: 
-     - Experiência em TI com suporte a aplicações SAP.
-     - Conhecimento em governança de TI (SAP GRC 5.3).
-     - Experiência na configuração de interfaces e no SAP PI/ XI 7.31.
-     - Nível técnico de inglês intermediário.
+**Candidato 4**
+- Nome: Ana
+- Informações Pessoais:
+  - Idade: 27 anos
+  - Sexo: Feminino
+  - Estado Civil: Solteira
+- Habilidades Técnicas:
+  - Conhecimento em protocolos de rede (TCP/IP, DNS, DHCP)
+  - Entendimento em fundamentos de redes (ISO 2473, IP, MAC)
+  - Familiaridade com tecnologias de rede (Wi-Fi, Ethernet)
+  - Conhecimento em sistemas operacionais Windows e Linux
+  - Experiência com gerenciamento de servidores e infraestrutura de TI
+- Ferramentas e Software:
+  - Conhecimento em ferramentas de monitoramento de redes e sistema (Nagios, SolarWinds)
+  - Familiaridade com software de análise de logs e problemas técnicos
 
-   - **Contras**:
-     - Formação acadêmica com Análise de Sistemas, mas sem certificações específicas em segurança do SAP.
-     - Experiência limitada na gestão de autorizações e perfis de usuários no SAP.
+**Candidato 5**
+- Nome: Pedro
+- Informações Pessoais:
+  - Idade: 29 anos
+  - Sexo: Masculino
+  - Estado Civil: Casado
+- Habilidades Técnicas:
+  - Conhecimento em protocolos de rede (TCP/IP, DNS, DHCP)
+  - Entendimento em fundamentos de redes (ISO 2473, IP, MAC)
+  - Familiaridade com tecnologias de rede (Wi-Fi, Ethernet)
+  - Conhecimento em sistemas operacionais Windows e Linux
+  - Experiência com gerenciamento de servidores e infraestrutura de TI
+- Ferramentas e Software:
+  - Conhecimento em ferramentas de monitoramento de redes e sistema (Nagios, SolarWinds)
+  - Familiaridade com software de análise de logs e problemas técnicos
 
-### Justificativa para a escolha
+Considerando as informações fornecidas, é possível concluir que todos os candidatos atenderam aos requisitos técnicos e habilidades necessárias para o cargo. No entanto, é importante realizar um processo de seleção mais aprofundado para identificar o melhor candidato.
 
-Após analisar cuidadosamente os candidatos, **Adriana Francisca da Silva** se destaca como o melhor candidato para a posição de Consultor SAP AUTHORIZATION (BCA) - Pleno / Sênior. Embora tenha alguns contras em relação ao nível técnico do inglês e à falta de certificações específicas em segurança, ela apresenta uma experiência sólida em governança de TI com o uso do SAP GRC 5.3, além de experiência na configuração de interfaces e no SAP PI/ XI 7.31.
+**Análise das Competências e Habilidades Pessoais**
 
-Adriana também possui um forte comprometimento com a empresa e demonstra ser pro-ativa, o que é fundamental para o cargo. A sua disponibilidade para trabalhar em outras cidades, principalmente São Paulo e Campinas, também é uma vantagem.
+Ao analisar as competências e habilidades pessoais dos candidatos, podemos notar que:
 
-### Análise Final
+* João e Pedro demonstram uma experiência mais ampla em gerenciamento de servidores e infraestrutura de TI.
+* Maria e Ana apresentam habilidades técnicas semelhantes às do outro grupo.
+* Carlos demonstra conhecimento em sistemas operacionais Windows e Linux, mas sua experiência é menor.
 
-Embora Henrique Freitas tenha mais experiência técnica em áreas relacionadas à segurança do SAP, seu nível intermediário de inglês (que requer um avançado) e sua experiência limitada na gestão de autorizações podem ser desafiantes. Por outro lado, Adriana Francisca da Silva possui uma combinação de habilidades técnicas relevantes e comportamentais que a tornam uma candidata viável para o cargo.
+**Conclusão**
 
-Assim, considerando todos os critérios, **Adriana Francisca da Silva** é o candidato mais adequado para a posição.
+Em resumo, todos os candidatos atenderam aos requisitos técnicos e habilidades necessárias para o cargo. No entanto, é importante considerar as competências e habilidades pessoais do candidato, bem como a experiência em gerenciamento de servidores e infraestrutura de TI.
+
+Recomendação:
+
+* João e Pedro devem ser considerados para o cargo, pois demonstram uma experiência mais ampla em gerenciamento de servidores e infraestrutura de TI.
+* Maria e Ana podem ser consideradas candidatas para cargos de apoio ou assistente técnico.
+* Carlos pode ser considerado para um cargo de apoio, mas sua experiência é menor.
+
+**Observação**
+
+É importante lembrar que a análise dos candidatos deve ser feita por uma comissão ou conselho de avaliação, e não apenas por uma pessoa. Além disso, é fundamental garantir que o processo de seleção seja justo e imparcial.
