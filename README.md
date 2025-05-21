@@ -1,15 +1,35 @@
 ## 📜 Índice
 
 - [📜 Índice](#-índice)
+- [🏁​ Introdução](#-introdução)
 - [📋 Preparação do Ambiente](#-preparação-do-ambiente)
 - [🐳 Executando com Docker](#-executando-com-docker)
 - [🤖 RecrutAi Crew](#-recrutai-crew)
-    - [💻 Instalação](#-instalação)
-    - [🏹 Uso](#-uso)
-    - [🛠️ Customização](#️-customização)
-    - [🧠 Entendendo o Crew](#-entendendo-o-crew)
-    - [🆘 Suporte](#-suporte)
+- [💻 Instalação](#-instalação)
+- [🏹 Uso](#-uso)
+- [🛠️ Customização](#️-customização)
+- [🧠 Entendendo o Crew](#-entendendo-o-crew)
+- [🆘 Suporte](#-suporte)
+- [🥁 Melhorias](#-melhorias)
 - [🪪 Autores](#-autores)
+
+## 🏁​ Introdução
+Neste desafio, os estudantes colocam em prática seus conhecimentos em Machine Learning para resolver problemas reais de uma empresa. O foco é aplicar Inteligência Artificial no processo de recrutamento e seleção, utilizando dados da Decision, empresa especializada em conectar talentos ao setor de tecnologia da informação.
+
+A missão é desenvolver uma solução baseada em IA que otimize entrevistas, identifique perfis ideais e melhore o match entre candidatos e vagas. Para isso, é necessário apresentar uma proposta completa, inteligente e funcional, capaz de transformar o processo seletivo por meio da tecnologia.
+
+Nossa proposta para o desafio foi utilizar agentes de IA como facilitadores do recrutamento. Esses sistemas autônomos atuam como especialistas na área, com uma função clara: analisar a descrição da vaga, considerar os dados dos candidatos e interpretar os comentários feitos pelos recrutadores. A partir dessas informações, os agentes realizam uma triagem precisa, destacando os candidatos que realmente atendem aos requisitos técnicos da posição.
+
+Assim, os agentes de IA tornam o processo seletivo mais ágil, consistente e objetivo, oferecendo suporte valioso aos recrutadores na tomada de decisão.
+
+![RecrutAI](https://github.com/augusto-vieira/Fiap-Datathon/img/1.png) C:\PROJECTS\Fiap-Datathon\img\1.png
+![Analise_1](https://github.com/augusto-vieira/Fiap-Datathon/img/2.png) C:\PROJECTS\Fiap-Datathon\img\2.png
+![Analise_2](https://github.com/augusto-vieira/Fiap-Datathon/img/3.png) 
+
+| ![Imagem 1](1.png) | ![Imagem 2](2.png) |
+|:------------------------:|:------------------------:|
+| Analise              | Sugestão              |
+
 
 ## 📋 Preparação do Ambiente
 Antes de rodar o projeto, é necessário adicionar manualmente os arquivos de dados, pois eles não estão disponíveis no repositório.
@@ -133,6 +153,10 @@ Se precisar de ajuda ou quiser saber mais:
 - 🤖 [Chat com as documentações](https://chatg.pt/DWjSBZn)
 
 Vamos criar maravilhas juntos com a força e simplicidade do **crewAI**! ✨
+
+## 🥁 Melhorias
+- Upload de currículos para análise.
+- Integração com LinkedIn API para buscar candidatos.
 
 ---
 ## 🪪 Autores
