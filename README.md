@@ -1,15 +1,14 @@
 ## 📜 Índice
 
-- [📜 Índice](#-índice)
 - [🏁​ Introdução](#-introdução)
 - [📋 Preparação do Ambiente](#-preparação-do-ambiente)
 - [🐳 Executando com Docker](#-executando-com-docker)
 - [🤖 RecrutAi Crew](#-recrutai-crew)
-- [💻 Instalação](#-instalação)
-- [🏹 Uso](#-uso)
-- [🛠️ Customização](#️-customização)
-- [🧠 Entendendo o Crew](#-entendendo-o-crew)
-- [🆘 Suporte](#-suporte)
+    - [💻 Instalação](#-instalação)
+    - [🏹 Uso](#-uso)
+    - [🛠️ Customização](#️-customização)
+    - [🧠 Entendendo o Crew](#-entendendo-o-crew)
+    - [🆘 Suporte](#-suporte)
 - [🥁 Melhorias](#-melhorias)
 - [🪪 Autores](#-autores)
 
@@ -22,14 +21,13 @@ Nossa proposta para o desafio foi utilizar agentes de IA como facilitadores do r
 
 Assim, os agentes de IA tornam o processo seletivo mais ágil, consistente e objetivo, oferecendo suporte valioso aos recrutadores na tomada de decisão.
 
-![RecrutAI](https://github.com/augusto-vieira/Fiap-Datathon/img/1.png) C:\PROJECTS\Fiap-Datathon\img\1.png
-![Analise_1](https://github.com/augusto-vieira/Fiap-Datathon/img/2.png) C:\PROJECTS\Fiap-Datathon\img\2.png
-![Analise_2](https://github.com/augusto-vieira/Fiap-Datathon/img/3.png) 
+| ![Imagem 1](https://github.com/augusto-vieira/Fiap-Datathon/blob/main/img/1.png) |
+|:------------------------:|
 
-| ![Imagem 1](1.png) | ![Imagem 2](2.png) |
+| ![Imagem 1](https://github.com/augusto-vieira/Fiap-Datathon/blob/main/img/2.png) | ![Imagem 2](https://github.com/augusto-vieira/Fiap-Datathon/blob/main/img/3.png) |
 |:------------------------:|:------------------------:|
-| Analise              | Sugestão              |
 
+--- 
 
 ## 📋 Preparação do Ambiente
 Antes de rodar o projeto, é necessário adicionar manualmente os arquivos de dados, pois eles não estão disponíveis no repositório.
