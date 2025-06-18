@@ -10,6 +10,7 @@
     - [🧠 Entendendo o Crew](#-entendendo-o-crew)
     - [🆘 Suporte](#-suporte)
 - [🥁 Melhorias](#-melhorias)
+- [🎞️ Vídeo (click aqui)](https://youtu.be/HAMsO3uuRLg)
 - [🪪 Autores](#-autores)
 
 ## 🏁​ Introdução
